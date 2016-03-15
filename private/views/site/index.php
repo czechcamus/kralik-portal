@@ -2,52 +2,53 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Html;
+
 $this->title = 'DENNY+ Milan Králík';
 ?>
-<div class="site-index">
+<div class="container">
+	<div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+		<div id="carousel-index" class="carousel slide" data-ride="carousel" data-interval="10000">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-index" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-index" data-slide-to="1"></li>
+			</ol>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<?= Html::img( 'img/pokoj.jpg', [
+						'alt' => 'obrázek - pokoj'
+					] ); ?>
+					<div class="carousel-caption">
+						<h3><?= Html::a('Privát Denny+', 'http://www.ubytovani-dacice.cz'); ?></h3>
+						<p>Ubytování v soukromí v Dačicích</p>
+					</div>
+				</div>
+				<div class="item">
+					<?= Html::img( 'img/autointerier.jpg', [
+						'alt' => 'obrázek - autointeriér'
+					] ); ?>
+					<div class="carousel-caption">
+						<h3><?= Html::a('Čištění autointeriérů', '#!'); ?></h3>
+						<p>Profesionální služby za rozumné ceny</p>
+					</div>
+				</div>
+			</div>
 
-    <div class="body-content">
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-index" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">předchozí</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-index" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">následující</span>
+			</a>
+		</div>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
+	</div>
 </div>

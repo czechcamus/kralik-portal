@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-default {
-    background-color: transparent;
+    background-color: white;
     border: none;
 }
 
@@ -16,7 +16,16 @@ body {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 50px 15px 0;
+}
+
+.carousel-caption h3 a {
+    color: darkgray;
+}
+
+.carousel-caption h3 a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .footer {
