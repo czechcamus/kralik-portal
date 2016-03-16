@@ -50,8 +50,8 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; DENNY+ Milan Králík <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">Webdesign by <?= Html::a('C@mus', 'http://www.camus.cz') ?></p>
+        <p class="text-center"><?= Yii::powered() ?></p>
     </div>
 </footer>
 
