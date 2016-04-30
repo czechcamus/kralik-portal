@@ -4,9 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use app\assets\AppAsset;
+use yii\widgets\Menu;
 
 AppAsset::register($this);
 ?>
@@ -24,28 +23,30 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Html::img('img/logo.png', ['alt' => 'denny+ logo']),
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-default navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'ubytování v soukromí', 'url' => 'http://www.ubytovani-dacice.cz'],
-            ['label' => 'čištění autointeriérů', 'url' => '#'],
-            ['label' => 'kontakt', 'url' => ['/site/contact']],
-        ],
-    ]);
-    NavBar::end();
-    ?>
+<header>
+	<nav>
+		<div class="container">
+			<div class="nav-wrapper">
+				<?= Menu::widget([
+					'options' => [
+						'class' => 'right'
+					],
+					'activateParents' => true,
+					'encodeLabels' => false,
+					'items' => [
+						['label' => 'ubytování v soukromí', 'url' => 'http://www.ubytovani-dacice.cz'],
+						['label' => 'čištění autointeriérů', 'url' => '#'],
+						['label' => 'kontakt', 'url' => ['/site/contact']],
+					]
+				]); ?>
+			</div>
+		</div>
+	</nav>
+</header>
 
-    <?= $content ?>
-</div>
+<main>
+	<?= $content ?>
+</main>
 
 <footer class="footer">
     <div class="container">

@@ -21,9 +21,10 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+        'js/bin/materialize.min.js',
+	    'js/site.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset'
     ];
 }
