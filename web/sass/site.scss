@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+// Mixins
+@import "../vendor/materialize/components/prefixer";
+@import "../vendor/materialize/components/mixins";
+@import "../vendor/materialize/components/color";
+@import "custom/mixins";
+
+// Variables;
+@import "../vendor/materialize/components/variables";
+@import "custom/variables";
+
+// Reset
+@import "../vendor/materialize/components/normalize";
+
+// components
+@import "../vendor/materialize/components/global";
+@import "../vendor/materialize/components/icons-material-design";
+@import "../vendor/materialize/components/grid";
+@import "../vendor/materialize/components/navbar";
+//@import "../vendor/materialize/components/roboto";
+@import "../vendor/materialize/components/typography";
+//@import "../vendor/materialize/components/cards";
+//@import "../vendor/materialize/components/toast";
+//@import "../vendor/materialize/components/tabs";
+//@import "../vendor/materialize/components/tooltip";
+@import "../vendor/materialize/components/buttons";
+@import "../vendor/materialize/components/dropdown";
+@import "../vendor/materialize/components/waves";
+//@import "../vendor/materialize/components/modal";
+//@import "../vendor/materialize/components/collapsible";
+//@import "../vendor/materialize/components/chips";
+//@import "../vendor/materialize/components/materialbox";
+//@import "../vendor/materialize/components/forms/forms";
+//@import "../vendor/materialize/components/table_of_contents";
+@import "../vendor/materialize/components/sideNav";
+//@import "../vendor/materialize/components/preloader";
+//@import "../vendor/materialize/components/slider";
+@import "../vendor/materialize/components/carousel";
+//@import "../vendor/materialize/components/date_picker/default";
+//@import "../vendor/materialize/components/date_picker/default.date";
+//@import "../vendor/materialize/components/date_picker/default.time";
+
+/* Styles --- */
+
+html {
+  font-family: $primary-font-family;
+  font-weight: 300;
+  font-size: 1.02rem;
+  color: $primary-color;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+// IE 10, 11 hack
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // Flexbox emulation begin
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    display: table;
+    width: 100%;
+  }
+
+  .page-row {
+    display: table-row;
+    height: 1px;
+  }
+
+  .page-row-expanded {
+    height: 100%;
+  }
+  // Flexbox emulation end
+}

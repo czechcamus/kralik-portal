@@ -4,8 +4,6 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -24,28 +22,21 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Html::img('img/logo.png', ['alt' => 'denny+ logo']),
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-default navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'ubytování v soukromí', 'url' => 'http://www.ubytovani-dacice.cz'],
-            ['label' => 'čištění autointeriérů', 'url' => '#'],
-            ['label' => 'kontakt', 'url' => ['/site/contact']],
-        ],
-    ]);
-    NavBar::end();
-    ?>
+<header>
+	<nav>
+	    <div class="nav-wrapper container">
+	        <a href="#" class="brand-logo"><?= Html::img('img/logo.png', ['alt' => 'denny+ logo']); ?></a>
+	        <ul id="nav-mobile" class="right">
+	            <li><a href="#!">čištění autointeriérů</a></li>
+	            <li><a href="#!">ubytování</a></li>
+	        </ul>
+	    </div>
+	</nav>
+</header>
 
+<main>
     <?= $content ?>
-</div>
+</main>
 
 <footer class="footer">
     <div class="container">
