@@ -5,14 +5,11 @@
 @import "../vendor/materialize/components/mixins";
 @import "../vendor/materialize/components/color";
 @import "custom/mixins";
-
 // Variables;
 @import "../vendor/materialize/components/variables";
 @import "custom/variables";
-
 // Reset
 @import "../vendor/materialize/components/normalize";
-
 // components
 @import "../vendor/materialize/components/global";
 @import "../vendor/materialize/components/icons-material-design";
@@ -35,7 +32,7 @@
 //@import "../vendor/materialize/components/table_of_contents";
 @import "../vendor/materialize/components/sideNav";
 //@import "../vendor/materialize/components/preloader";
-//@import "../vendor/materialize/components/slider";
+@import "../vendor/materialize/components/slider";
 @import "../vendor/materialize/components/carousel";
 //@import "../vendor/materialize/components/date_picker/default";
 //@import "../vendor/materialize/components/date_picker/default.date";
@@ -58,6 +55,34 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+header {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  nav {
+    background-color: transparent;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+}
+
+.slider {
+  .slides {
+    li {
+      .caption {
+        top: 35%;
+        h3 {
+          font-size: 3rem;
+          font-weight: 100;
+        }
+        .btn-large {
+
+        }
+      }
+    }
+  }
 }
 
 // IE 10, 11 hack

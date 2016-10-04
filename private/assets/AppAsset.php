@@ -18,7 +18,9 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+    	'https://fonts.googleapis.com/css?family=Raleway',
+	    'https://fonts.googleapis.com/icon?family=Material+Icons',
+        'css/site.css'
     ];
     public $js = [
 	    'vendor/materialize/js/materialize.min.js',
