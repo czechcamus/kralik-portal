@@ -27,8 +27,8 @@ AppAsset::register($this);
 	    <div class="nav-wrapper container">
 	        <a href="#" class="brand-logo"><?= Html::img('img/logo.png', ['alt' => 'denny+ logo']); ?></a>
 	        <ul id="nav-mobile" class="right">
-	            <li><a href=http://denny-plus.blog.cz/">čištění autointeriérů</a></li>
-	            <li><a href="http://www.ubytovani-dacice.cz">ubytování v Dačicích</a></li>
+	            <li><a href="http://denny-plus.blog.cz/">čištění autointeriérů</a></li>
+	            <li><a href="http://www.ubytovani-dacice.cz/">ubytování v Dačicích</a></li>
 	        </ul>
 	    </div>
 	</nav>
